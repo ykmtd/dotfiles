@@ -1,0 +1,2 @@
+# view commit ID
+set main-view = id date author commit-title:graph=yes,refs=yes
