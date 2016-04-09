@@ -23,6 +23,8 @@ autoload -Uz colors
 colors
 eval `dircolors -b`; zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
+zstyle ':completion:*' completer _complete _prefix _approximate
+
 #---------------------#
 # Prompt              #
 #---------------------#
