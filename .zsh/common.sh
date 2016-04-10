@@ -82,7 +82,12 @@ TERM=xterm-256color
 #---------------------#
 # alias               #
 #---------------------#
-alias ls='ls -G'
+if [[ `uname` == "darwin" ]]; then
+    alias ls='ls -G'
+else
+    alias ls='ls --color'
+fi
+
 alias lsa='ls -al'
 alias -g L='| less'
 alias -g G='| grep'
