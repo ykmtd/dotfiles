@@ -17,13 +17,11 @@ SAVEHIST=100000
 autoload -Uz compinit
 compinit
 zstyle ':completion:*:default' menu select=2
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 autoload -Uz colors
 colors
-eval `dircolors -b`; zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-
-zstyle ':completion:*' completer _complete _prefix _approximate
+type dircolors > /dev/null && eval `dircolors -b`; zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 bindkey "^[[Z" reverse-menu-complete
 
@@ -84,7 +82,7 @@ TERM=xterm-256color
 #---------------------#
 # alias               #
 #---------------------#
-alias ls='ls --color'
+alias ls='ls -G'
 alias lsa='ls -al'
 alias -g L='| less'
 alias -g G='| grep'
