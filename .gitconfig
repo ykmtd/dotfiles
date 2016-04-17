@@ -1,0 +1,2 @@
+[core]
+    editor = "/usr/local/bin/emacsclient -t -nw" --alternate-editor "/usr/local/bin/emacs -nw"
