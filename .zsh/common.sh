@@ -79,6 +79,9 @@ alias emasc='emacs'
 
 TERM=xterm-256color
 
+# run server (default: disabled)
+# test -e "/tmp/emacs1000/server" || test -e "~/.emasc.d/server" || emacsd
+
 #---------------------#
 # alias               #
 #---------------------#
@@ -94,6 +97,12 @@ alias -g G='| grep'
 alias cp='cp -i'
 alias rm='rm -i'
 alias mv='mv -i'
+
+#----------------------#
+# mount if not mounted #
+#----------------------#
+# mountpoint -q ~/host/ || sudo mount -t vboxsf host ~/host -o rw,exec,uid=1000,gid=1000,dev
+# mountpoint -q ~/mnt/C_DRIVE || sudo mount -t vboxsf C_DRIVE ~/mnt/C_DRIVE -o rw,exec,uid=1000,gid=1000,dev
 
 #---------------------#
 # .etc                #
