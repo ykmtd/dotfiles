@@ -6,7 +6,7 @@ fi
 source ${HOME}/.zsh/common.sh
 
 # additonal packages
-source ${HOME}/.zplug/zplug
+source ${HOME}/.zplug/init.zsh
 source ${HOME}/.zsh/package.sh
 zplug install
 zplug load
